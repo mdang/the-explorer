@@ -1,0 +1,465 @@
+/*---------------------------------------------------------
+  C O L O R S
+
+  orange: #DF673D;
+  dark grey text; #888
+  dark grey background: #373637;
+  light grey background: #F2F3EE;
+----------------------------------------------------------- */
+
+/*---------------------------------------------------------
+  H E L P E R S
+----------------------------------------------------------- */
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+.clearfix {
+  *zoom: 1;
+}
+
+/*---------------------------------------------------------
+  B A S E   S T Y L E S
+----------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #F2F3EE;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.main-wrapper {
+  margin: 1rem;
+  max-width: 1400px;
+  z-index: 5;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #F2F3EE;
+  margin-bottom: 1.5rem;
+}
+
+/*---------------------------------------------------------
+  T Y P O G R A P H Y
+----------------------------------------------------------- */
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+
+h1, h2 {
+  font-family: 'Old Standard TT', serif;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: #888;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #888;
+  text-decoration: none;
+}
+
+/*---------------------------------------------------------
+  H E A D E R
+----------------------------------------------------------- */
+header {
+  background-color: #373637;
+  color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+header a {
+  color: white;
+}
+
+.logo {
+  float: left;
+  margin-bottom: 0;
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+.logo span {
+  margin-right: .5rem;
+}
+
+/*---------------------------------------------------------
+  N A V
+----------------------------------------------------------- */
+#dropdown {
+  background-color: #808080;
+  display: none;
+}
+
+#dropdown > section:first-child {
+  display: block;
+}
+
+.nav-panel {
+  text-align: center;
+  display: none;
+}
+
+.nav-panel a {
+  color: white;
+}
+
+header nav {
+  float: right;
+}
+
+nav li,
+.nav-panel li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav a,
+.nav-panel a {
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: .8rem 0;
+  line-height: 2;
+}
+
+header nav a {
+  color: #C1C1C1;
+  transition: all .3s ease-in-out;
+  padding-bottom: 6px;
+}
+
+nav a:hover,
+.nav-panel a:hover {
+  color: white;
+}
+
+.active {
+  border-bottom: 2px solid #D06F4B;
+  padding-bottom: 0;
+}
+
+.hamburger {
+  display: none;
+}
+
+/*---------------------------------------------------------
+  G A L L E R Y
+----------------------------------------------------------- */
+#slideshow img {
+  width: 100%;
+  display: none;
+}
+
+#slideshow {
+  text-align: center;
+}
+
+#slideshow .slideshow-wrapper {
+  position: relative;
+}
+
+#slideshow img.current {
+  display: block;
+}
+
+#slideshow #caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: left;
+  font-size: 1.5em;
+  font-family: 'Old Standard TT', serif;
+  color: #F2F3EE;
+  background-color: rgba(50,50,50,.8);
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+#slideshow button {
+  color: white;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+/*---------------------------------------------------------
+  F I X E D   I M A G E
+----------------------------------------------------------- */
+.fixed-image-panel {
+  clear: both;
+  height: 300px;
+  background-image: url("../images/moon.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/*---------------------------------------------------------
+  A R T I C L E S
+----------------------------------------------------------- */
+article {
+  text-align: center;
+  width: 49%;
+  float: left;
+  padding: 3rem 2rem 4rem;
+  background-color: white;
+  margin: 1rem 2% 1rem 0;
+}
+
+article:nth-of-type(even) {
+  margin-right: 0;
+}
+
+article .fa {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+article h2 {
+  margin-bottom: .4rem;
+}
+
+article h1 {
+  margin-bottom: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+#article-list footer {
+  clear: both;
+  margin: 1em;
+}
+
+#article-list footer button {
+  background-color: #808080;
+  border: 1px solid #808080;
+  color: #F2F3EE;
+}
+
+/*---------------------------------------------------------
+  L E A D   S T O R Y
+----------------------------------------------------------- */
+.lead-story .fa {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.lead-story {
+  padding: 9rem 0;
+  float: none;
+  width: auto;
+  background-color: #DF673D;
+  color: #333;
+  margin-right: 0;
+}
+
+.lead-story p {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.lead-story h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.lead-story h2 {
+  font-size: 1.5rem;
+}
+
+.lead-story a {
+  color: white;
+}
+
+.lead-story hr {
+  width: 50%;
+  margin: 0 auto 2rem;
+  border-bottom-color: #333;
+}
+
+/*---------------------------------------------------------
+  Q U O T E
+----------------------------------------------------------- */
+.quote {
+  background-color: white;
+  padding: 2rem 4rem;
+  margin: 1rem 0;
+  font-family: 'Old Standard TT', serif;
+  font-size: 3rem;
+}
+
+blockquote {
+  margin-top: .5rem;
+}
+
+blockquote + p {
+  text-align: right;
+  padding: 1rem;
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+/*---------------------------------------------------------
+  F O R M S
+----------------------------------------------------------- */
+input {
+  padding: .8rem;
+  font-size: 1.2rem;
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  margin: 0 0 0 2rem;
+  width: 200px;
+  background-color: #373637;
+  border: 1px solid #808080;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: #808080;
+  border: 1px solid #808080;
+  color: #373637;
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+  padding: .8rem;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button[disabled] {
+  opacity: .3;
+}
+
+/*---------------------------------------------------------
+  F O O T E R
+----------------------------------------------------------- */
+footer {
+  color: white;
+  text-align: center;
+}
+
+footer nav {
+  display: inline-block;
+}
+
+.footer-content {
+  background-color: #373637;
+  padding: 4rem 2rem;
+}
+
+.copyright-info {
+  background-color: #808080;
+  color: #373637;
+  padding: .5rem 2rem;
+}
+
+.copyright-info a {
+  color: #373637;
+}
+
+footer .social-links a {
+  display: inline-block;
+  font-size: 1.9rem;
+  margin: 3rem 1.5rem 0;
+}
+
+/*---------------------------------------------------------
+  M E D I A   Q U E R I E S
+----------------------------------------------------------- */
+@media only screen and (min-width: 1400px) {
+  .main-wrapper {
+    margin: 1rem auto;
+  }
+}
+
+@media only screen and (max-width: 905px) {
+  html {
+    font-size: 13px;
+  }
+
+  nav li,
+  .nav-panel li {
+    margin: 0 .5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .logo span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 695px) {
+  .hamburger {
+    display: block;
+  }
+}
