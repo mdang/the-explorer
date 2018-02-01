@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  var slideshow = [{
+  const slideshow = [{
     'image': 'images/slideshow_1.jpeg',
     'caption': 'Cloudy with a chance of moon'
   }, {
@@ -11,4 +11,6 @@
     'image': 'images/slideshow_3.jpeg',
     'caption': 'Moonrise'
   }];
+
+  
 })();
